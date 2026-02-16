@@ -18,13 +18,17 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+def query_db(query, args=(), one=False):
+    cur = get_db().execute(query, args)
+    rv = cur.fetchall()
+    cur.close() 
+    return (rv[0] if rv else None) if one else rv
+
 @app.route('/')
 def home():
-    db = get_db()
-    cursor = db.cursor()
+    # home page - return just the model name, image URL manufacturer and fuselage for all commercial airrcraft in the database
     sql = "SELECT * FROM Commercial_aircraft"
-    cursor.execute(sql)
-    results = cursor.fetchall()
+    results = query_db(sql)
     return str(results) # for testing purposes, we will just return the results as a string
 
 if __name__ == "__main__":

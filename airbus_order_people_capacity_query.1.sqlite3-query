@@ -1,8 +1,0 @@
--- database: ./database.db
-
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Commercial_aircraft.max_people_capacity  
-FROM Commercial_aircraft
-INNER JOIN Manufacturer
-ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
-WHERE manufacturer_name = 'Airbus'
-ORDER BY Commercial_aircraft.max_people_capacity ASC;
