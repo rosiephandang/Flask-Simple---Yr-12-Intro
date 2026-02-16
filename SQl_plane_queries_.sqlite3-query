@@ -1,7 +1,7 @@
 -- database: ./database.db
 
--- for HOME PAGE: all planes (model, manufacturer, image URL, fuselage type)
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name
+-- 1 for HOME PAGE: all planes (model, manufacturer, image URL, fuselage type)
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
@@ -9,8 +9,8 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 ORDER BY Commercial_aircraft.model_name ASC;
 
--- planes (model, manufacuterer, fuselage) sorted by manufacturer (Airbus)
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name
+-- 2 planes (model, manufacuterer, fuselage) sorted by manufacturer (Airbus)
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
@@ -20,8 +20,8 @@ WHERE manufacturer_name = 'Airbus'
 ORDER BY Commercial_aircraft.model_name ASC;
 
 
--- planes (model, manufacuterer, fuselage) sorted by manufacturer (Boeing)
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name
+-- 3 planes (model, manufacuterer, fuselage) sorted by manufacturer (Boeing)
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
@@ -31,8 +31,8 @@ WHERE manufacturer_name = 'Boeing'
 ORDER BY Commercial_aircraft.model_name ASC;
 
 
--- planes (model, manufacturer, fuselage) sorted by fuselage (narrow)
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name
+-- 4 planes (model, manufacturer, fuselage) sorted by fuselage (narrow)
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
@@ -42,8 +42,8 @@ WHERE Fuselage.type_name = 'Narrow-body'
 ORDER BY Commercial_aircraft.model_name ASC;
 
 
--- planes (model, manufacturer, fuselage) sorted by fuselage (wide)
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name
+-- 5 planes (model, manufacturer, fuselage) sorted by fuselage (wide)
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
@@ -53,8 +53,8 @@ WHERE Fuselage.type_name = 'Wide-body'
 ORDER BY Commercial_aircraft.model_name ASC;
 
 
---planes ordered by people capacity
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_people_capacity  
+-- 6 planes ordered by people capacity
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_people_capacity  
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
@@ -62,8 +62,8 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 ORDER BY Commercial_aircraft.max_people_capacity ASC;
 
---planes ordered by max distance
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_distance_km  
+-- 7 planes ordered by max distance
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_distance_km  
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
@@ -71,8 +71,8 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 ORDER BY Commercial_aircraft.max_distance_km ASC;
 
---planes ordered by max speed
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.top_speed_kmph  
+-- 8 planes ordered by max speed
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.top_speed_kmph  
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
@@ -80,8 +80,8 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 ORDER BY Commercial_aircraft.top_speed_kmph ASC;
 
---planes ordered by max takeoff weight
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_takeoff_weight_kg  
+-- 9 planes ordered by max takeoff weight
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.max_takeoff_weight_kg  
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
@@ -89,8 +89,8 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 ORDER BY Commercial_aircraft.max_takeoff_weight_kg ASC;
 
---planes ordered by fuel capacity
-SELECT Commercial_aircraft.model_name,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.fuel_capacity_L 
+-- 10 planes ordered by fuel capacity
+SELECT Commercial_aircraft.model_name,Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name,Commercial_aircraft.fuel_capacity_L 
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id
