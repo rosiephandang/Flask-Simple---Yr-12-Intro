@@ -1,5 +1,150 @@
 -- database: ./database.db
 
+-- Airbus
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Airbus_A220-100_%28CSeries%29.jpg/1200px-Airbus_A220-100_%28CSeries%29.jpg'
+WHERE model_name = 'A220-100';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Airbus_A220-300.jpg/1200px-Airbus_A220-300.jpg'
+WHERE model_name = 'A220-300';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Airbus_A321-231.jpg/1200px-Airbus_A321-231.jpg'
+WHERE model_name = 'A321 / A321neo / XLR';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Airbus_A318-111.jpg/1200px-Airbus_A318-111.jpg'
+WHERE model_name = 'A318';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Airbus_A319-132.jpg/1200px-Airbus_A319-132.jpg'
+WHERE model_name = 'A319';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Airbus_A320-214.jpg/1200px-Airbus_A320-214.jpg'
+WHERE model_name = 'A320';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Airbus_A330-200.jpg/1200px-Airbus_A330-200.jpg'
+WHERE model_name = 'A330-200';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Airbus_A330-900neo.jpg/1200px-Airbus_A330-900neo.jpg'
+WHERE model_name = 'A330-900 (neo)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Airbus_A330-300.jpg/1200px-Airbus_A330-300.jpg'
+WHERE model_name = 'A330-300';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Airbus_A340-300.jpg/1200px-Airbus_A340-300.jpg'
+WHERE model_name = 'A340-300';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Airbus_A340-500.jpg/1200px-Airbus_A340-500.jpg'
+WHERE model_name = 'A340-500';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Airbus_A340-600.jpg/1200px-Airbus_A340-600.jpg'
+WHERE model_name = 'A340-600';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Airbus_A350-900.jpg/1200px-Airbus_A350-900.jpg'
+WHERE model_name = 'A350-900';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Airbus_A350-1000.jpg/1200px-Airbus_A350-1000.jpg'
+WHERE model_name = 'A350-1000';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Airbus_A380-800.jpg/1200px-Airbus_A380-800.jpg'
+WHERE model_name = 'A380';
+
+
+-- Boeing NG
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Boeing_737-600.jpg/1200px-Boeing_737-600.jpg'
+WHERE model_name = '737-600 (NG)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Boeing_737-700.jpg/1200px-Boeing_737-700.jpg'
+WHERE model_name = '737-700 (NG)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Boeing_737-800.jpg/1200px-Boeing_737-800.jpg'
+WHERE model_name = '737-800 (NG)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boeing_737-900.jpg/1200px-Boeing_737-900.jpg'
+WHERE model_name = '737-900 (NG)';
+
+-- Boeing MAX
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boeing_737_MAX_7.jpg/1200px-Boeing_737_MAX_7.jpg'
+WHERE model_name = '737 MAX 7';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Boeing_737_MAX_8.jpg/1200px-Boeing_737_MAX_8.jpg'
+WHERE model_name = '737 MAX 8';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Boeing_737_MAX_9.jpg/1200px-Boeing_737_MAX_9.jpg'
+WHERE model_name = '737 MAX 9';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Boeing_737_MAX_10.jpg/1200px-Boeing_737_MAX_10.jpg'
+WHERE model_name = '737 MAX 10';
+
+-- Widebody Boeing
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Boeing_747-400.jpg/1200px-Boeing_747-400.jpg'
+WHERE model_name = '747-400';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boeing_747-8.jpg/1200px-Boeing_747-8.jpg'
+WHERE model_name = '747-8';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Boeing_767-300ER.jpg/1200px-Boeing_767-300ER.jpg'
+WHERE model_name = '767-300ER';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Boeing_767-400ER.jpg/1200px-Boeing_767-400ER.jpg'
+WHERE model_name = '767-400ER';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Boeing_777-200ER.jpg/1200px-Boeing_777-200ER.jpg'
+WHERE model_name = '777-200';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Boeing_777-300ER.jpg/1200px-Boeing_777-300ER.jpg'
+WHERE model_name = '777-300ER';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Boeing_777-8.jpg/1200px-Boeing_777-8.jpg'
+WHERE model_name = '777-8 (777X)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Boeing_777-9.jpg/1200px-Boeing_777-9.jpg'
+WHERE model_name = '777-9 (777X)';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Boeing_787-8_Dreamliner.jpg/1200px-Boeing_787-8_Dreamliner.jpg'
+WHERE model_name = '787-8';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Boeing_787-9_Dreamliner.jpg/1200px-Boeing_787-9_Dreamliner.jpg'
+WHERE model_name = '787-9';
+
+UPDATE Commercial_aircraft SET image_url =
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Boeing_787-10_Dreamliner.jpg/1200px-Boeing_787-10_Dreamliner.jpg'
+WHERE model_name = '787-10';
+
+
+
+
+
 
 -- 0 for testing purposes
 SELECT Commercial_aircraft.model_name,  Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name, Commercial_aircraft.top_speed_kmph, Commercial_aircraft.max_people_capacity, Commercial_aircraft.max_distance_km, Commercial_aircraft.max_takeoff_weight_kg,Commercial_aircraft.fuel_capacity_L
