@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, g # render_template
+from flask import Flask, g, render_template
 
 DATABASE = 'database.db'
 
@@ -36,7 +36,7 @@ def home():
         ON Commercial_aircraft.fuselage_id = Fuselage.type_id
         ORDER BY Commercial_aircraft.model_name ASC;"""
     results = query_db(sql)
-    return str(results) # for testing purposes, we will just return the results as a string
+    return render_template("layout.html")
 
 @app.route('/aircraft/<int:model_id>')
 def aircraft(model_id):
