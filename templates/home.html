@@ -1,4 +1,19 @@
 {% extends "layout.html" %}
-{% block content %}
-    <!-- Home page-->>
+{% block body %}
+    <!-- Home page-->
+
+
+    <!-- 3 grid layout to show aircraft -->
+     <div class="threecolumn">
+        {% for row in results %}
+        <div class="w3-card-4">
+            <!-- the name then the image then the description -->
+            <h2>{{ row[0] }}</h2>
+            <img clas="planeplane" src="{{ row[1] }}" alt="Image of {{ row[0] }}" style="width:100%">
+            <h3> {{row[2]}} - {{row[3]}}</h3>
+        </div>
+        {% endfor %}
+     </div>
+
+    
 {% endblock %}
