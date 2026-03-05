@@ -27,7 +27,7 @@ def query_db(query, args=(), one=False):
 @app.route('/')
 def home():
     # home page - return just the model name, image URL manufacturer and fuselage for all commercial airrcraft in the database
-    sql = """SELECT Commercial_aircraft.model_name,
+    sql = """SELECT Commercial_aircraft.aircraft_id,Commercial_aircraft.model_name,
       Commercial_aircraft.image_url,
       Manufacturer.manufacturer_name, 
       Fuselage.type_name
@@ -36,12 +36,12 @@ def home():
         ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id 
         INNER JOIN Fuselage
         ON Commercial_aircraft.fuselage_id = Fuselage.type_id
-        ORDER BY Commercial_aircraft.model_name ASC;"""
+        ORDER BY Commercial_aircraft.aircraft_id ASC;"""
     results = query_db(sql)
     return render_template("home.html", results=results)
 
-#@app.route('/aircraft/<int:model_id>')
-#def aircraft(model_id):
+@app.route('/aircraft/<int:model_id>')
+def aircraft(model_id):
     # return all details for a specific model of commercial aircraft
     sql = """SELECT Commercial_aircraft.model_name,  Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name, Commercial_aircraft.top_speed_kmph, Commercial_aircraft.max_people_capacity, Commercial_aircraft.max_distance_km, Commercial_aircraft.max_takeoff_weight_kg,Commercial_aircraft.fuel_capacity_L
 FROM Commercial_aircraft
@@ -51,7 +51,12 @@ INNER JOIN Fuselage
 ON Commercial_aircraft.fuselage_id = Fuselage.type_id
 WHERE Commercial_aircraft.aircraft_id = ?;"""
     result = query_db(sql, (model_id,), one=True)
-    return str(result) # for testing purposes, we will just return the result as a string
+    return render_template("plane.html", aircraft=result)
+
+
+
+
+# extra queries 
 
 #@app.route('/airbus')
 #def airbus():
