@@ -43,7 +43,16 @@ def home():
 @app.route('/aircraft/<int:id>')
 def aircraft(id):
     # return all details for a specific model of commercial aircraft
-    sql = """SELECT Commercial_aircraft.aircraft_id,Commercial_aircraft.model_name,  Commercial_aircraft.image_url,Manufacturer.manufacturer_name, Fuselage.type_name, Commercial_aircraft.top_speed_kmph, Commercial_aircraft.max_people_capacity, Commercial_aircraft.max_distance_km, Commercial_aircraft.max_takeoff_weight_kg,Commercial_aircraft.fuel_capacity_L
+    sql = """SELECT Commercial_aircraft.aircraft_id,
+    Commercial_aircraft.model_name,  
+    Commercial_aircraft.image_url,
+    Manufacturer.manufacturer_name, 
+    Fuselage.type_name, 
+    Commercial_aircraft.top_speed_kmph, 
+    Commercial_aircraft.max_people_capacity, 
+    Commercial_aircraft.max_distance_km, 
+    Commercial_aircraft.max_takeoff_weight_kg,
+    Commercial_aircraft.fuel_capacity_L
 FROM Commercial_aircraft
 INNER JOIN Manufacturer
 ON Commercial_aircraft.manufacture_id = Manufacturer.manufacturer_id

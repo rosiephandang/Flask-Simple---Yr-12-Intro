@@ -27,6 +27,9 @@ ul li a {
   display: block;
   color: white;
   padding: 14px 16px;
+  /*display: grid;
+  grid-template-column: 1fr 1fr 1fr 1fr;*/
+  width: 120px;
   text-decoration: none;
 }
 
@@ -38,6 +41,10 @@ ul li a.active {
   background-color: #04AA6D;
 }
 
+li.meh, .dropbtn{
+   border-right: #1d1d1d 3px solid;
+
+}
 
 /* dropdown container*/
 li a, .dropbtn {
@@ -56,13 +63,24 @@ li.dropdown {
   display: inline-block;
 }
 
+.dropbtn{
+  background-image: url("https://media.istockphoto.com/id/538665020/photo/internet-meme-why-you-no-rage-face-3d-illustration.jpg?s=612x612&w=0&k=20&c=5D_g8Jy8kqg5Op2bb4RvcH8_6y0HGPqt29TKDrEqLyM=");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:cover;
+  color: black;
+}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-image: url("https://media.istockphoto.com/id/538665020/photo/internet-meme-why-you-no-rage-face-3d-illustration.jpg?s=612x612&w=0&k=20&c=5D_g8Jy8kqg5Op2bb4RvcH8_6y0HGPqt29TKDrEqLyM=");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:cover;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-bottom: #111111 3px solid;
 }
 
 .dropdown-content a {
@@ -93,4 +111,14 @@ li.dropdown {
 
 .linkpiority{
   font-size: 10px;
+}
+
+.two-column{
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 50px;
+  padding: 50px;
+  margin: 100px;
+  margin-top: 50px;
 }

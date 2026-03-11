@@ -3,10 +3,21 @@
     <!-- page for one plane -->
 
     <!-- two column grid -->
-     <p>{{ result }}</p>
+
       <div class="two-column">
          <!--image on left-->
          <img class="planeplaneplane" src="{{ result[2] }}" alt="Image of {{ result[1] }}">
+         <div class="planeinfo">
+            <h2>Model: {{ result[1] }}</h2>
+            <h3>Manufacturer: {{ result[3] }}</h3>
+            <p>Aisle: {{ result[4] }}</p>
+            <p>Top speed: {{ result[5] }} km/h</p>
+            <p>Maximum no. passengers: {{ result[6] }}</p>
+            <p>Range: {{ result[7] }} km</p>
+            <p>Maximum Take-off weight: {{ result[8] }} kg</p>
+            <p>Fuel capacity: {{ result[9] }} L</p>
+
+         </div>
       </div>
 
     
